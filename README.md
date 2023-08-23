@@ -6,7 +6,9 @@
 
 みんな大好き`Vue`でフォームを使う場合、個人的に最強と思われる、以下の組み合わせで作成したサンプルになります。
 
-#### こちらで作成したReactおどうぐばこのVue版です。
+ [こちら]([https://qiita.com/minori_s/items/6e96d2f80ad1699e9c83](https://github.com/minori-sys/react-form-tool-box)) で作成したReactおどうぐばこのVue版です。
+
+てか、見た目もそのまんまです。
 
 ### `Vue` × `Typescript` × `VeeValidate` × `Zod`
 
