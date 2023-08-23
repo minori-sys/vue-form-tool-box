@@ -6,7 +6,7 @@
 
 みんな大好き`Vue`でフォームを使う場合、個人的に最強と思われる、以下の組み合わせで作成したサンプルになります。
 
- [こちら]([https://qiita.com/minori_s/items/6e96d2f80ad1699e9c83](https://github.com/minori-sys/react-form-tool-box)) で作成したReactおどうぐばこのVue版です。
+ [こちら](https://github.com/minori-sys/react-form-tool-box)で作成したReactおどうぐばこのVue版です。
 
 てか、見た目もそのまんまです。
 
@@ -46,7 +46,7 @@
 
 今回、気がついたらVue3になって破壊的にいろいろ変わっているんで面食らいました。
 
-ただ、`<script setup lang="ts">`の記法（？）は、普段ガシガシ使っている`React`に近い感覚で記述ができるようになり、Vue2の時代より、今の方が好きだなあという印象です。
+ただ、`<script setup>`の記法（？）は、普段ガシガシ使っている`React`に近い感覚で記述ができるようになり、`Vue2`の時代より、今の方が好きだなあという印象です。
 （あまり情報なくて試行錯誤感もすごいですが）
 
 という訳で、洗練された作りには、かな〜りほど遠いかと思われますので、あくまで「最強」は*ネタ*として受け取って下さいまし。
@@ -60,7 +60,7 @@
 `zod`との連携もほぼ同じようなイメージで対応でき、学習コストが低く済みました。
 
 ### なぜ`Zod`なのか
-こちらは、Reactおどうぐばこの説明をご参照頂ければ……。
+こちらは、 [Reactおどうぐばこ](https://github.com/minori-sys/react-form-tool-box)の説明をご参照頂ければ……。
 
 例によって、説明文だけでなく、`schema`も使い回ししています。
 
@@ -76,7 +76,7 @@
 Gitが入っていれば下記のコマンドでDLできるはずです。
 
 ```bash
-$ git clone https://github.com/minori-sys/react-form-tool-box.git
+$ git clone https://github.com/minori-sys/vue-form-tool-box.git
 ```
 
 # Usage
@@ -135,7 +135,7 @@ $  yarn format
 
 ええ。`Vue`の醍醐味（？）と言えば、vueファイル内にstyleが書き書きできることですよね。
 わかります。（力説）
-ですが、今回は、前述のReactおどうぐばこで以下の宣言をした通り……。
+ですが、今回は、前述の[Reactおどうぐばこ](https://github.com/minori-sys/react-form-tool-box)で以下の宣言をした通り……。
 
 > てか、Vueでサンプルを作る際でも、そのまま使い回せるなあと。（待て）
 
