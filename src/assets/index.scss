@@ -1,0 +1,92 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap");
+
+$color-primary: #ffd1d1 !default;
+$color-primary-light: #ffe3e1 !default;
+$color-primary-heavy: #ff9494 !default;
+$color-background: #fff5e4 !default;
+$default-font-size: 16;
+
+body {
+  font-family: "Zen Maru Gothic", sans-serif;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+@mixin font-rem($font-size-px, $default-font-size: $default-font-size) {
+  font-size: math.div($font-size-px, $default-font-size) * 1rem;
+}
+
+h2 {
+  @include font-rem(16);
+  padding: 10px 0;
+  margin: 4px 0;
+  text-align: left;
+}
+
+.form-area {
+  padding: 8px 25px 20px;
+  border: 2px solid $color-primary;
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 18px auto 0;
+  text-align: left;
+  .title {
+    position: relative;
+    top: -15px;
+    left: 0;
+    align-items: center;
+    display: inline-flex;
+    margin: 0 7px;
+    padding: 0 8px;
+    background: #fff;
+    color: $color-primary-heavy;
+    font-weight: 700;
+    @include font-rem(20);
+    vertical-align: top;
+  }
+  i {
+    padding-right: 4px;
+    @include font-rem(24);
+  }
+  p {
+    margin: 0;
+    @include font-rem(13);
+    color: #bf1650;
+  }
+  p::before {
+    display: inline;
+    content: "⚠ ";
+  }
+}
+
+.button {
+  @include font-rem(14);
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  margin: 40px 0 20px;
+  border: none;
+  border-radius: 0;
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: $color-primary-heavy;
+}

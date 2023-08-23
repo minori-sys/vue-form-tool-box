@@ -1,0 +1,24 @@
+@use "./index";
+
+.textarea {
+  background-color: index.$color-primary;
+  border: 2px solid index.$color-primary;
+  width: 100%;
+  border-radius: 0;
+  padding: 8px 10px;
+  font-size: 1em;
+  line-height: 1.5;
+  height: 8em;
+}
+
+.textarea:placeholder-shown {
+  background-color: index.$color-primary-light;
+  border: 2px solid index.$color-primary-light;
+}
+
+.textarea:hover,
+.textarea:focus {
+  outline: none;
+  border: 2px solid index.$color-primary-heavy;
+  background-color: index.$color-primary;
+}

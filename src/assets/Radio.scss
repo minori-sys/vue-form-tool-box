@@ -1,0 +1,50 @@
+@use "./index";
+
+.radio {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  gap: 0.3em 2em;
+}
+
+.radio input {
+  display: none;
+}
+
+.radio label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  gap: 0 0.7em;
+}
+
+.radio label::before,
+.radio label:has(:checked)::after {
+  border-radius: 50%;
+  content: "";
+}
+
+.radio label::before {
+  width: 20px;
+  height: 20px;
+  background-color: index.$color-primary-light;
+}
+
+.radio label:hover::before {
+  background-color: index.$color-primary-heavy;
+}
+
+.radio label:has(:checked)::after {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
+
+.radio label:has(:checked)::before {
+  background-color: index.$color-primary-heavy;
+}

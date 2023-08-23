@@ -1,0 +1,59 @@
+@use "./index";
+
+.checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+  gap: 0.5em 2em;
+  margin-bottom: 3px;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  gap: 0 0.7em;
+}
+
+.checkbox label::before,
+.checkbox label:has(:checked)::after {
+  content: "";
+}
+
+.checkbox label::before {
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0;
+  background-color: #ffe3e1;
+}
+
+.checkbox label:hover::before,
+.checkbox label:focus::before {
+  background-color: index.$color-primary-heavy;
+}
+
+.checkbox label:has(:checked)::before {
+  background-color: index.$color-primary-heavy;
+}
+
+.checkbox label:has(:checked):hover::before,
+.checkbox label:has(:checked):focus::before {
+  background-color: index.$color-primary-heavy;
+}
+
+.checkbox label:has(:checked)::after {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 5px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

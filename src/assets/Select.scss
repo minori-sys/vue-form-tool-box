@@ -1,0 +1,36 @@
+@use "index";
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 18px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #7b7b7b transparent transparent transparent;
+  }
+  select {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    padding: 15px 10px;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    background: index.$color-primary;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}

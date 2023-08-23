@@ -1,0 +1,25 @@
+@use "./index";
+
+.input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 2px solid index.$color-primary;
+  border-radius: 0;
+  line-height: 1.15;
+  background-color: index.$color-primary;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.input:placeholder-shown {
+  background-color: index.$color-primary-light;
+  border: 2px solid index.$color-primary-light;
+}
+
+.input:hover,
+.input:focus {
+  outline: none;
+  border: 2px solid index.$color-primary-heavy;
+  background-color: index.$color-primary;
+}
