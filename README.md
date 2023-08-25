@@ -6,7 +6,7 @@
 
 みんな大好き`Vue`でフォームを使う場合、個人的に最強と思われる、以下の組み合わせで作成したサンプルになります。
 
- [こちら](https://github.com/minori-sys/react-form-tool-box)で作成したReactおどうぐばこのVue版です。
+[こちら](https://github.com/minori-sys/react-form-tool-box)で作成したReactおどうぐばこのVue版です。
 
 てか、見た目もそのまんまです。
 
@@ -17,7 +17,6 @@
 #### フォーム全体像
 
 ![screencapture-localhost-5173-2023-08-23-20_32_22](https://github.com/minori-sys/vue-form-tool-box/assets/31578760/873d8445-6e3b-4948-8771-dcbd85e70c42)
-
 
 #### Validation時
 
@@ -42,7 +41,6 @@
 - ちぇっくぼっくすにちぇっくしてないと怒られるやつ
 - てきすとえりあになんか書いてないと怒られるやつ
 
-
 ### ここでいきなり注意書き
 
 ……なのですが、私は`Vue`は*2*使いで、お察しの通り、お久しぶりね〜の世界です。
@@ -63,6 +61,7 @@
 `zod`との連携もほぼ同じようなイメージで対応でき、学習コストが低く済みました。
 
 ### なぜ`Zod`なのか
+
 こちらは、 [Reactおどうぐばこ](https://github.com/minori-sys/react-form-tool-box)の説明をご参照頂ければ……。
 
 例によって、説明文だけでなく、`schema`も使い回ししています。

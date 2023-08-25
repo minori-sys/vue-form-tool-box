@@ -6,7 +6,7 @@ import Select from "./Select.vue";
 import Radio from "./Radio.vue";
 import Check from "./Check.vue";
 import Textarea from "./Textarea.vue";
-import { area, reply } from "../data.ts";
+import { area, reply } from "../data/data.ts";
 import { schema } from "../schema/schema.ts";
 
 const { handleSubmit, errors, isSubmitting, resetForm } = useForm({
