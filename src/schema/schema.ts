@@ -28,12 +28,17 @@ export const schema = toTypedSchema(
         })
         .min(1, errorMessage.area_empty)
         .transform((v) => Number(v)),
-      terms: z.literal(true, {
-        errorMap: () => ({ message: errorMessage.terms_check }),
-      }),
-      reply: z.enum(["yes", "no"], {
-        errorMap: () => ({ message: errorMessage.reply_empty }),
-      }),
+      sns: z
+        .string({
+          required_error: errorMessage.sns_empty,
+        })
+        .array()
+        .nonempty(errorMessage.sns_empty),
+      reply: z
+        .string({
+          required_error: errorMessage.reply_empty,
+        })
+        .min(1, { message: errorMessage.reply_empty }),
       message: z
         .string({
           required_error: errorMessage.message_empty,

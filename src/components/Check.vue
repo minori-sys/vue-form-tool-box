@@ -3,27 +3,24 @@ import { Field } from "vee-validate";
 import ErrorMessage from "./ErrorMessage.vue";
 import "../assets/Check.scss";
 
+type CheckItem = {
+  label: string;
+  value: string | number;
+};
+
 interface Props {
   name: string;
-  label: string;
+  items: Array<CheckItem>;
 }
 defineProps<Props>();
 </script>
 
 <template>
   <div class="checkbox">
-    <Field v-slot="{ field }" :name="name" type="checkbox" :value="true">
-      <label>
-        <input
-          class="checkbox"
-          type="checkbox"
-          :name="name"
-          v-bind="field"
-          :value="true"
-        />
-        {{ label }}
-      </label>
-    </Field>
+    <label v-for="item in items" :key="item.value" :value="item.value">
+      <Field :name="name" type="checkbox" :value="item.value" />
+      {{ item.label }}
+    </label>
   </div>
   <ErrorMessage :name="name" />
 </template>

@@ -30,7 +30,7 @@ export const sns = [
     value: "Facebook",
   },
   {
-    label: "Twitter",
+    label: "Twitter（Ｘ）",
     value: "Twitter",
   },
   {

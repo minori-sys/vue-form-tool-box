@@ -6,7 +6,7 @@ import Select from "./Select.vue";
 import Radio from "./Radio.vue";
 import Check from "./Check.vue";
 import Textarea from "./Textarea.vue";
-import { area, reply } from "../data/data.ts";
+import { area, reply, sns } from "../data/data.ts";
 import { schema } from "../schema/schema.ts";
 
 const { handleSubmit, errors, isSubmitting, resetForm } = useForm({
@@ -40,10 +40,10 @@ watch(
     <Input name="emailConfirm" :schema="schema" />
     <h2>お住まいの地域</h2>
     <Select name="area" :items="area" />
+    <h2>利用SNS</h2>
+    <Check name="sns" :items="sns" />
     <h2>返信の有無</h2>
     <Radio name="reply" :items="reply" />
-    <h2>利用規約</h2>
-    <Check name="terms" label="同意する" />
     <h2>メッセージ</h2>
     <Textarea name="message" :schema="schema" />
     <button class="button">送信</button>
