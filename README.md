@@ -16,11 +16,11 @@
 
 #### フォーム全体像
 
-![screencapture-localhost-5173-2023-08-23-20_32_22](https://github.com/minori-sys/vue-form-tool-box/assets/31578760/f08447af-86d4-4f6d-a254-c3e0b138e9c5)
+![screencapture-localhost-5173-2023-08-30-22_43_17](https://github.com/minori-sys/vue-form-tool-box/assets/31578760/e5264794-19b6-4923-a131-930f73b90f86)
 
 #### Validation時
 
-![screencapture-localhost-5173-2023-08-23-20_32_39](https://github.com/minori-sys/vue-form-tool-box/assets/31578760/7b09c770-ffab-49fd-8237-6c78c22fcd35)
+![screencapture-localhost-5173-2023-08-30-22_43_30](https://github.com/minori-sys/vue-form-tool-box/assets/31578760/3c6c9f7a-2f8d-45ef-a698-ebd2d0f6eba7)
 
 #### 搭載Form部品
 
