@@ -3,25 +3,13 @@ import { toTypedSchema } from "@vee-validate/zod";
 import { errorMessage } from "../data/errorMessage.ts";
 
 export const schema = toTypedSchema(
-  z
-    .object({
+  z.object({
+    form: z.object({
       name: z
         .string({
           required_error: errorMessage.name_empty,
         })
         .nonempty(errorMessage.name_empty),
-      email: z
-        .string({
-          required_error: errorMessage.email_empty,
-        })
-        .nonempty(errorMessage.email_empty)
-        .email(errorMessage.email_check),
-      emailConfirm: z
-        .string({
-          required_error: errorMessage.email_empty,
-        })
-        .nonempty(errorMessage.email_empty)
-        .email(errorMessage.email_check),
       area: z
         .string({
           required_error: errorMessage.area_empty,
@@ -44,16 +32,25 @@ export const schema = toTypedSchema(
           required_error: errorMessage.message_empty,
         })
         .nonempty(errorMessage.message_empty),
-    })
-    .superRefine(({ email, emailConfirm }, ctx) => {
-      if (email !== emailConfirm) {
-        ctx.addIssue({
-          path: ["emailConfirm"],
-          code: "custom",
-          message: errorMessage.email_confirm,
-        });
-      }
     }),
+    formMail: z
+      .object({
+        email: z
+          .string({
+            required_error: errorMessage.email_empty,
+          })
+          .nonempty(errorMessage.email_empty)
+          .email(errorMessage.email_check),
+        emailConfirm: z
+          .string({
+            required_error: errorMessage.email_empty,
+          })
+          .nonempty(errorMessage.email_empty)
+          .email(errorMessage.email_check),
+      })
+      .refine(({ email, emailConfirm }) => email === emailConfirm, {
+        path: ["emailConfirm"],
+        message: errorMessage.email_confirm,
+      }),
+  }),
 );
-
-export type Schema = z.infer<typeof schema>;

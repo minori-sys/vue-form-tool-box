@@ -33,19 +33,19 @@ watch(
 <template>
   <form @submit.prevent="onSubmit">
     <h2>お名前</h2>
-    <Input name="name" :schema="schema" />
+    <Input name="form.name" :schema="schema" />
     <h2>メールアドレス</h2>
-    <Input name="email" :schema="schema" />
+    <Input name="formMail.email" :schema="schema" />
     <h2>メールアドレス（確認）</h2>
-    <Input name="emailConfirm" :schema="schema" />
+    <Input name="formMail.emailConfirm" :schema="schema" />
     <h2>お住まいの地域</h2>
-    <Select name="area" :items="area" />
+    <Select name="form.area" :items="area" />
     <h2>利用SNS</h2>
-    <Check name="sns" :items="sns" />
+    <Check name="form.sns" :items="sns" />
     <h2>返信の有無</h2>
-    <Radio name="reply" :items="reply" />
+    <Radio name="form.reply" :items="reply" />
     <h2>メッセージ</h2>
-    <Textarea name="message" :schema="schema" />
+    <Textarea name="form.message" :schema="schema" />
     <button class="button">送信</button>
   </form>
 </template>
