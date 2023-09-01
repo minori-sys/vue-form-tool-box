@@ -66,14 +66,15 @@
 
 例によって、説明文だけでなく、`schema`も使い回し……と思ったのですが、世の中そんなに甘くありませんでした。（涙）
 
-`VeeValidate`の公式の`Zod Schema Validation`に、以下のような記述がありまして。。
+`VeeValidate`の公式の[Zod Schema Validation](https://vee-validate.logaretm.com/v4/integrations/zod-schema-validation/)に、以下のような記述がありまして。。
 
 <img width="784" alt="スクリーンショット 2023-09-01 19 39 46" src="https://github.com/minori-sys/vue-form-tool-box/assets/31578760/d0320942-3689-4947-9690-0456aeab2dcc">
 
+<br />
 
 `React`時代と同じ`schema`のままだと、`めーるあどれすをもう一回入力して、違っていたら怒られるやつ`で使っている`superRefine`がうまく動かず。。
 
-それを解決するため、**Vue向けに魔改修しています。**　＞ 魔改造言わない。（ごく普通にzod公式のissueに寄せられた解決方法で改修していますので、ご安心下さい）
+それを解決するため、**Vue向けに魔改修しています。**　＞ 魔改造言わない。（ごく普通にzod公式の[issue](https://github.com/colinhacks/zod/issues/479)に寄せられた解決方法で改修していますので、ご安心下さい）
 
 という訳で、アレだ。
 
