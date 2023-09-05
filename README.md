@@ -10,6 +10,9 @@
 
 てか、見た目もそのまんまです。
 
+### zenn記事
+https://zenn.dev/minori_sys/articles/88f2a2f8aa1b5a
+
 ---
 
 ### `Vue` × `Typescript` × `VeeValidate` × `Zod`
